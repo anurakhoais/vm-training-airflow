@@ -1,15 +1,5 @@
 sudo apt update
 sudo apt install cifs-utils
 
-RESOURCE_GROUP_NAME="rg-AirflowTraining-az-asse-dev-001"
-STORAGE_ACCOUNT_NAME="stairflowtrain"
-
-# This command assumes you have logged in with az login
-HTTP_ENDPOINT=$(az storage account show \
-    --resource-group $RESOURCE_GROUP_NAME \
-    --name $STORAGE_ACCOUNT_NAME \
-    --query "primaryEndpoints.file" --output tsv | tr -d '"')
-SMBPATH=$(echo $HTTP_ENDPOINT | cut -c7-${#HTTP_ENDPOINT})
-FILE_HOST=$(echo $SMBPATH | tr -d "/")
-
-nc -zvw3 $FILE_HOST 445
+sudo mkdir /mnt/training
+sudo mount -t cifs //stairflowtrain.blob.core.windows.net/training /mnt/training -o vers=3.0,username=stairflowtrain,password=sQDBkgdtxvuJx3olCaS9DDaNxulb7kJLdKPLM1X9WPnQ2otV/7MBmOyslT+hqfqQLEBL1Z/bEoSR+ASt3t79kw==,dir_mode=0777,file_mode=0777
