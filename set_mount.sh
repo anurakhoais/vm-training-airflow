@@ -12,4 +12,4 @@ sudo chmod 600 /etc/smbcredentials/stairflowtrain.cred
 sudo bash -c 'echo "//stairflowtrain.file.core.windows.net/training /mnt/training cifs nofail,credentials=/etc/smbcredentials/stairflowtrain.cred,dir_mode=0777,file_mode=0777,serverino,nosharesock,actimeo=30" >> /etc/fstab'
 sudo mount -t cifs //stairflowtrain.file.core.windows.net/training /mnt/training -o credentials=/etc/smbcredentials/stairflowtrain.cred,dir_mode=0777,file_mode=0777,serverino,nosharesock,actimeo=30
 
-sudo apt-get install postgresql
+sudo apt-get install -y postgresql
