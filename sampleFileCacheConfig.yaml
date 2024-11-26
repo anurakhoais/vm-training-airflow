@@ -26,7 +26,7 @@ attr_cache:
 azstorage:
   type: block
   account-name: stairflowtrain
-  account-key: sQDBkgdtxvuJx3olCaS9DDaNxulb7kJLdKPLM1X9WPnQ2otV/7MBmOyslT+hqfqQLEBL1Z/bEoSR+ASt3t79kw==
+  account-key: <key>
   endpoint: https://stairflowtrain.blob.core.windows.net
   mode: key
   container: training
