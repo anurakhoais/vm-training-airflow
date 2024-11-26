@@ -5,7 +5,7 @@ sudo mkdir /etc/smbcredentials
 fi
 if [ ! -f "/etc/smbcredentials/stairflowtrain.cred" ]; then
     sudo bash -c 'echo "username=stairflowtrain" >> /etc/smbcredentials/stairflowtrain.cred'
-    sudo bash -c 'echo "password=sQDBkgdtxvuJx3olCaS9DDaNxulb7kJLdKPLM1X9WPnQ2otV/7MBmOyslT+hqfqQLEBL1Z/bEoSR+ASt3t79kw==" >> /etc/smbcredentials/stairflowtrain.cred'
+    sudo bash -c 'echo "<key>" >> /etc/smbcredentials/stairflowtrain.cred'
 fi
 sudo chmod 600 /etc/smbcredentials/stairflowtrain.cred
 
